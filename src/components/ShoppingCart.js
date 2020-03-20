@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import Item from './ShoppingCartItem';
-import CartContext from '../contexts/CartContext' //link ?
+import CartContext from '../contexts/CartContext' //link 
 
 
 const ShoppingCart = () => {
@@ -9,7 +9,7 @@ const ShoppingCart = () => {
 			return acc + value.price;
 		}, 0).toFixed(2);
 	};
-   const cart = useContext(CartContext)
+   const { cart } = useContext(CartContext) // dont forget to destructure!!
 	return (
 		<div className="shopping-cart">
    
